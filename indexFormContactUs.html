@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    
+    <!-- when you use the POST method in your form, the form data is sent to the URL specified in the action attribute,
+    but instead of appending the data to the URL as query parameters, the data is sent in the HTTP request body.
+    This makes POST suitable for sending larger amounts of data and for keeping sensitive information out of the URL -->
+
+    <form action="" method="get">
+      <!-- When the form is submitted, the value entered in this input field(name) is sent to the server with this name as its key.
+    This id is used by the for attribute of the <label> tag to create a connection between the label and the input field -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <!-- Using placeholder attribute you can give hints
+      Using value attribute you can set default values -->
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required /><br /><br />
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required /><br /><br />
+
+      <!-- The <textarea> tag is used to create a multi-line text input field, which is different from the
+    single-line text input fields created with the <input> tag
+    rows - Specifies the number of visible text lines for the <textarea>
+    cols - Specifies the visible width of the <textarea in terms of the number of character columns, means the text area will be wide
+    enough to display 50 characters per line     -->
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" cols="50" required /></textarea><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
